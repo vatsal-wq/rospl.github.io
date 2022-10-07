@@ -1,0 +1,34 @@
+.Main2 {
+    width: 100%;
+    height: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 5px;
+    background-color: #e0a96d;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    font-family: "Courier New", Courier, monospace;
+    color: red;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 60;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+    padding-top: 10px;
+    padding-left: 40px;
+    text-align: center;
+    text-emphasis-color: Red;
+    text-decoration: overline underline;
+}
+

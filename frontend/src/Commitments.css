@@ -1,0 +1,21 @@
+.commits {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  line-height: 3;
+}
+
+.qrsw  {
+
+    width: 25%;
+    padding-left: 5%;
+}
+
+.write {
+
+font-family:'Courier New', Courier, monospace;
+font-style: italic;
+text-decoration: overline underline;
+color: red;
+
+}
