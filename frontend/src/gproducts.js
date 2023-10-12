@@ -2,8 +2,8 @@ const gproducts = [
 
     {
         id: "1",
-        name: "Intel® Core™ i3-XXXX Processor (3M Cache, up to 3.10 GHz)",
-        image: '/images/i3.png',
+        name: "Ryzen 7 5800x (3M Cache, up to 5GHz)",
+        image: '/images/ryzen.jpg',
         description: "The best processing chip for entry level computing",
         brand: "Intel Computers",
         category: 'Processors',
@@ -16,8 +16,8 @@ const gproducts = [
 
     {
         id: "2",
-        name: "GTX 750Ti",
-        image: '/images/gpu.png',
+        name: "Nvidia GeForce RTX 3070",
+        image: '/images/3070.jpg',
         description: "Start your journey with an exciting integration of several CUDA cores packed in a single chip",
         brand: "Nvidia",
         category: 'Graphics Card',
@@ -30,8 +30,8 @@ const gproducts = [
 
     {
         id: "3",
-        name: "H310M-S2",
-        image: '/images/h310m.png',
+        name: "X570 Motherboard, for Ryzen Chipsets",
+        image: '/images/mobo2.jpg',
         description: "The Best Entry-Level motherboard you would ever find!",
         brand: "Gigabyte",
         category: 'Motherboard',
@@ -44,8 +44,8 @@ const gproducts = [
 
     {
         id: "4",
-        name: "HyperX 1x8GB 1600MHZ RAM Stick",
-        image: '/images/ram.png',
+        name: "Adata XPG 32GB RAM Chipset",
+        image: '/images/ram3.jpg',
         description: "The Best Entry-Level Random Access Memory you would ever find!",
         brand: "Kingston",
         category: 'Memory',
@@ -58,8 +58,8 @@ const gproducts = [
 
     {
         id: "5",
-        name: "Seagate Firecuda 500GB Hard Drive",
-        
+        name: "Samsung NVME M.2 High Profile Solid State Drive",
+        image: '/images/ssd2.jpg',
         description: "Your Operating System and other files under one roof!",
         brand: "Seagate",
         category: 'Space',

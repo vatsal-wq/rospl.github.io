@@ -12,6 +12,11 @@ import Novice  from "./Novice";
 import { University } from "./University";
 import { Gamer } from "./Gamer";
 import Novicepdetails from "./Novicepdetails";
+import Account from "./Account";
+import Register from "./Register";
+import Cart from "./Cart";
+import Shipping from "./Shipping";
+import Order from "./Order";
 
 
 function App() {
@@ -23,7 +28,11 @@ function App() {
    <Route path = "/university" element = {<University />} />
    <Route path = "/gamer" element = {<Gamer />} />
    <Route path ="/novice/:id" element = {<Novicepdetails />} />
-   <Route path ="/novice#features" element  />
+   <Route path ="/account" element = {<Account />} />
+   <Route path ="/register" element = {<Register />} />
+   <Route path ="/cart" element = {<Cart />} />
+   <Route path ="/shipping" element = {<Shipping /> } />
+   <Route path="/order" element = {<Order />} />
    
    </Routes>
    </BrowserRouter>

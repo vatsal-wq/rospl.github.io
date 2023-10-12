@@ -3,16 +3,17 @@ import axios from "axios";
 import Novicedetails from "./Novicedetails";
 import { Row, Col } from "react-bootstrap";
 import Navbar from "./Navbar";
+// import Footer from "./Footer";
 
 const Novice = () => {
   const [nproducts, setnproducts] = useState([]);
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data } = await axios.get("/products");
+      const { data } = await axios.get("/api/products");
       setnproducts(data);
     };
     fetchProducts();
-  }, []);;
+  });;
 
   return (
     <>
@@ -24,6 +25,7 @@ const Novice = () => {
           </Col>
         ))}
       </Row>
+      
     </>
   );
 };

@@ -1,6 +1,6 @@
-import React from "react";
-// import axios from "axios";
-import nproducts from "./nproducts";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Navbar from "./Navbar";
 import { useParams } from "react-router-dom";
 import {
   Row,
@@ -11,13 +11,52 @@ import {
   ListGroupItem,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import {useCookies} from 'react-cookie';
+var CryptoJS = require('crypto-js');
+
 
 const Novicepdetails = () => {
   const params = useParams();
-  const nproduct = nproducts.find((p) => p.id === params.id);
+  const [nproduct, setnproduct] = useState([]);
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${params.id}`);
+      setnproduct(data);
+    };
+    fetchProduct();
+  });
+
+  async function AddToCart () {
+    const res = await fetch('http://localhost:8080/cart/add',{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          user,
+          product: params.id
+        }) 
+      
+    })
+    const data = await res.json()
+    if (data.status==="Ok") {
+      alert("Added to cart!")
+    
+    }
+    else {
+      alert("Let us check the stock!")
+    }
+  }
+
+  const [cookies] = useCookies('user');
+    var bytes = CryptoJS.AES.decrypt(cookies.user, 'my-secret-key@123');
+    var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+    const user = decryptedData.email;
 
   return (
+     
     <div>
+      <Navbar />
       <Link to="/novice" className="btn btn-light">
         {" "}
         Go Back
@@ -45,7 +84,7 @@ const Novicepdetails = () => {
             </Row>
           </ListGroupItem>
           <ListGroupItem>
-            <Button className="btn-block" type="button">
+            <Button onClick={AddToCart} className="btn-block" type="button">
               {" "}
               Add to cart{" "}
             </Button>
